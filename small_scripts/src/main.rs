@@ -1,7 +1,9 @@
 
 mod once_cell_script;
+mod simd_within_a_register;
 
 use once_cell_script::{DB, test_db};
+use simd_within_a_register::{test};
 
 
 fn do_something1 () -> String {
@@ -20,4 +22,6 @@ fn main () {
     let res3 = test_db::test_something();
 
     println!("{}, {}, {}", res1, res2, res3);
+
+    test();
 }
